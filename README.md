@@ -1,4 +1,3 @@
-
 Rest Countries Weather API
 This project displays a list of countries along with their respective flags, capital cities, regions, country codes, latitudes, and longitudes. Additionally, users can click a button to retrieve and display the current temperature for each country using the OpenWeatherMap API.
 
@@ -12,6 +11,7 @@ License
 Installation
 Clone the repository:
 
+sh
 Copy code
 git clone https://github.com/your-username/rest-countries-weather.git
 cd rest-countries-weather
@@ -51,7 +51,7 @@ lon: Longitude of the location.
 appid: Your OpenWeatherMap API key.
 Example Request:
 
-
+sh
 Copy code
 https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=YOUR_API_KEY
 Response:
