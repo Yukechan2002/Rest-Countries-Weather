@@ -22,7 +22,7 @@ The project demonstrates the use of asynchronous JavaScript (using async/await) 
 
 ## Demo
 
-You can view a live demo of the project [here](#).
+You can view a live demo of the project [here](https://restcountries-weather-api-fetch.netlify.app/).
 
 ## Features
 
