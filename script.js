@@ -5,7 +5,7 @@ container.innerHTML = `<h1 class ="text-center" id="title">Rest Countries Weathe
   var row = document.createElement("div");
   row.className = "row";
 
-  
+ 
 
   try {
     let data = await fetch("https://restcountries.com/v3.1/all");
@@ -52,5 +52,5 @@ async function Weather(lat, lon, button) {
     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=3fdb46d68715c1511c6c2a05647e4ab9`
   );
   let data1 = await data.json();
-  return data1.main.temp;
+  return (data1.main.temp - 273.15).toFixed(2);git
 }

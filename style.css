@@ -1,27 +1,26 @@
-.card-img-top{
+.card-img-top {
     height: 150px;
     width: 250px;
 }
-body{
+body {
     background-color: rgb(244, 244, 121);
 }
-.card{
+.card {
     color: white;
 }
-.card-header{
+.card-header {
     background-color: black;
 }
-.card-body{
-    background-image: linear-gradient(lightblue, blue );
+.card-body {
+    background-image: linear-gradient(lightblue, blue);
 }
-
-.head{
+.head {
     padding: 10px 0px 20px 0px;
- text-align: center;
+    text-align: center;
 }
-.btn{
+.btn {
     position: relative;
 }
-.container{
+.container {
     padding-left: 60px;
 }
