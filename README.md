@@ -1,59 +1,81 @@
-Rest Countries Weather API
-This project displays a list of countries along with their respective flags, capital cities, regions, country codes, latitudes, and longitudes. Additionally, users can click a button to retrieve and display the current temperature for each country using the OpenWeatherMap API.
+# Country Weather
 
-Table of Contents
-Installation
-Usage
-Project Structure
-API Reference
-Contributing
-License
-Installation
-Clone the repository:
+This project showcases a webpage that displays weather information for countries around the world. It fetches data from the REST Countries API and the OpenWeatherMap API to provide detailed information about each country, including the current weather.
 
-sh
-Copy code
-git clone https://github.com/your-username/rest-countries-weather.git
-cd rest-countries-weather
-Open index.html in your browser:
+## Table of Contents
 
-You can simply open the index.html file in any web browser to run the application.
+- [Description](#description)
+- [Demo](#demo)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-Usage
-When you open the index.html file, the application fetches a list of countries from the Rest Countries API and displays them as cards. Each card contains the following information:
+## Description
 
-Country Name
-Country Flag
-Capital City
-Region
-Country Code
-Latitude and Longitude
-A button to fetch and display the current temperature for the country
-To get the weather information for a country, click the "Click for Weather" button on the respective country's card. The temperature will replace the button.
+The **Country Weather** project is a web application that lists countries with their respective details and current weather information. When a user clicks the "Click for Weather" button, it fetches the weather data for the specified country's coordinates and displays it on the card.
 
-Project Structure
-The project consists of the following files:
+The project demonstrates the use of asynchronous JavaScript (using async/await) to fetch data from APIs and dynamically update the webpage content. It uses Bootstrap for responsive design and basic HTML, CSS, and JavaScript for structuring and styling the webpage.
 
-index.html: The main HTML file that sets up the structure of the web page.
-style.css: The CSS file that contains styles for the page.
-script.js: The JavaScript file that contains the logic for fetching and displaying data from the APIs.
-API Reference
-Rest Countries API
-Endpoint: https://restcountries.com/v3.1/all
-Method: GET
-Description: Fetches data for all countries.
-OpenWeatherMap API
-Endpoint: https://api.openweathermap.org/data/2.5/weather
-Method: GET
-Parameters:
-lat: Latitude of the location.
-lon: Longitude of the location.
-appid: Your OpenWeatherMap API key.
-Example Request:
+## Demo
 
-sh
-Copy code
-https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=YOUR_API_KEY
-Response:
+You can view a live demo of the project [here](#).
 
-The response contains the weather data, including temperature, which is accessed as data1.main.temp in the code.
+## Features
+
+- **Country Information**: Displays name, capital, region, country code, latitude, and longitude of each country.
+- **Weather Information**: Fetches and displays the current temperature of the selected country.
+- **Responsive Design**: The layout adjusts gracefully to different screen sizes.
+- **Bootstrap Integration**: Utilizes Bootstrap for styling and responsive design.
+
+## Technologies Used
+
+- **HTML5**: For structuring the webpage.
+- **CSS3**: For styling the webpage.
+- **Bootstrap 4.6.2**: For responsive design and pre-built components.
+- **JavaScript**: For adding interactivity and fetching API data.
+
+## Setup
+
+To set up the project locally, follow these steps:
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/your-username/country-weather.git
+    ```
+
+2. **Navigate to the project directory**:
+    ```bash
+    cd country-weather
+    ```
+
+3. **Open the `index.html` file** in your web browser to view the page.
+
+## Usage
+
+1. Open the `index.html` file in a web browser.
+2. Browse the list of countries displayed.
+3. Click the "Click for Weather" button on any country card to fetch and display the current temperature for that country's location.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch:
+    ```bash
+    git checkout -b feature-branch
+    ```
+3. Make your changes.
+4. Commit your changes:
+    ```bash
+    git commit -m 'Add new feature'
+    ```
+5. Push to the branch:
+    ```bash
+    git push origin feature-branch
+    ```
+6. Open a pull request.
