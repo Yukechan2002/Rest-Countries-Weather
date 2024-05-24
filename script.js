@@ -1,13 +1,11 @@
 async function foo() {
   var container = document.createElement("div");
   container.className = "container";
-
+container.innerHTML = `<h1 class ="text-center" id="title">Rest Countries Weather<h1>`;
   var row = document.createElement("div");
   row.className = "row";
 
-  var heading = document.createElement("h2");
-  heading.className = "head";
-  heading.innerHTML = `Rest Countries Weather`;
+  
 
   try {
     let data = await fetch("https://restcountries.com/v3.1/all");
@@ -28,7 +26,7 @@ async function foo() {
     <button type="button" class="btn btn-outline-light weather-btn " data-lat="${res[i].latlng[0]}" data-lon="${res[i].latlng[1]}">Click for Weather</button>
   </div>`;
       row.append(col);
-      container.append(heading, row);
+      container.append(row);
       document.body.append(container);
     }
     var weatherButtons = document.querySelectorAll(".weather-btn");
@@ -49,8 +47,10 @@ async function foo() {
 }
 foo();
 
-async function Weather(lat,lon,button){
-  let data=await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=3fdb46d68715c1511c6c2a05647e4ab9`)
-  let data1=await data.json()
+async function Weather(lat, lon, button) {
+  let data = await fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=3fdb46d68715c1511c6c2a05647e4ab9`
+  );
+  let data1 = await data.json();
   return data1.main.temp;
 }
