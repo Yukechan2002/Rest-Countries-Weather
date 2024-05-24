@@ -28,15 +28,31 @@ async function foo() {
     <button type="button" class="btn btn-outline-light weather-btn" data-lat="${res[i].latlng[0]}" data-lon="${res[i].latlng[1]}">Click for Weather</button>
   </div>`;
 
+
       row.append(col);
       container.append(heading, row);
       document.body.append(container);
     }
-    
+    var weatherButtons = document.querySelectorAll(".weather-btn");
+    weatherButtons.forEach(function (button) {
+      button.addEventListener("click", async function () {
+        var lat = this.getAttribute("data-lat");
+        var lon = this.getAttribute("data-lon");
+        var temperature = await Weather(lat, lon);
+        var cardBody = this.parentElement;
+        var temperatureElement = document.createElement("p");
+        temperatureElement.textContent = `Temperature: ${temperature}°C`;
+        cardBody.replaceChild(temperatureElement, this);
+      });
+    });
   } catch (error) {
     console.log(error);
   }
 }
 foo();
 
-
+async function Weather(lat,lon,button){
+  let data=await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=3fdb46d68715c1511c6c2a05647e4ab9`)
+  let data1=await data.json()
+  return (data1.main.temp - 273.15).toFixed(2);
+}
